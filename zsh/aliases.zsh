@@ -96,3 +96,44 @@ alias rs='rspec spec'
 alias sp='sprintly'
 # spb = sprintly branch - create a branch automatically based on the bug you're working on
 alias spb="git checkout -b \`sp | tail -2 | grep '#' | sed 's/^ //' | sed 's/[^A-Za-z0-9 ]//g' | sed 's/ /-/g' | cut -d"-" -f1,2,3,4,5\`"
+
+
+alias fvfsrv="rvmsudo rails s -p 80"
+
+alias qs="python -m SimpleHTTPServer"
+
+alias getbbl="wget http://code.jquery.com/jquery.js http://underscorejs.org/underscore.js http://backbonejs.org/backbone.js"
+
+alias lsa="ls -a"
+
+alias mmm="mvim ."
+
+# 
+# GIT
+# 
+alias gc="git commit -m $1"
+alias gca="git add -A; git commit -m $1"
+alias gcap=git_add_all_commit_and_push
+alias gs='git status'
+alias gf='git fetch'
+alias gm='git merge origin'
+alias gp='git push'
+alias gpl='git pull'
+alias gpom="git pull origin master"
+alias grm='git status --porcelain | ruby -e "puts STDIN.read.scan(/^\\s+D\\s+(.+)\$/).join(\"\\n\")" | xargs git rm'
+
+function git_add_all_commit_and_push () {
+  git add -A;
+  git commit -m "$1";
+  git push;
+}
+
+alias ksdiff='diff --using="ksdiff-wrapper"'
+
+alias riviera="cd ~/Projects/riviera"
+
+alias hybrid="cd ~/Projects/hybrid"
+
+alias nu="date -u +%Y%m%d%H%M%S"
+
+alias chgalias="mvim ~/.magus/zsh/aliases.zsh"
